@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <link href="rps.css" rel="stylesheet">
+</head>
+<body>
+  <div class="previous-score">
+    <p>Previous Score</p>
+    <div>
+      <span class="prev-score-player-word">Player</span>
+      <input type="number" class="prev-score-player" disabled>
+      <span class="prev-score-comp-word">Computer</span>
+      <input type="number" class="prev-score-computer" disabled>
+    </div>
+  </div>
+
+  <div class="game-container">
+    <div class="game-title"><h1>Rock, Paper, Scissors</h1></div>
+
+    <div class="new-game"><button>Start Game</button></div>
+
+    <!-- hidden until Start Game is pressed -->
+    <div class="actual-game">
+      <div class="gm">
+        <div class="player-choice">
+          <p>Your Choice</p>
+          <img src="rock.png" class="rock-img" data-value="rock">
+          <img src="paper.png" class="paper-img" data-value="paper">
+          <img src="scissors.png" class="scissors-img" data-value="scissors">
+        </div>
+
+        <div class="player-chose">
+          <p>You Chose:</p>
+          <div class="show-imgs">
+            <img src="rock.png" class="pshow-img-rock" data-value="rock">
+            <img src="paper.png" class="pshow-img-paper" data-value="paper">
+            <img src="scissors.png" class="pshow-img-scissors" data-value="scissors">
+          </div>
+        </div>
+
+        <div class="computer-choice">
+          <p>Computer is Choosing...</p>
+        </div>
+
+        <div class="computer-chose">
+          <p>Computer Chose:</p>
+          <div class="show-imgs">
+            <img src="rock.png" class="cshow-img-rock" data-value="rock">
+            <img src="paper.png" class="cshow-img-paper" data-value="paper">
+            <img src="scissors.png" class="cshow-img-scissors" data-value="scissors">
+          </div>
+        </div>
+      </div>
+
+      <div class="result">
+        <p class="for-player">Player Won!!!</p>
+        <p class="for-computer">Computer Won!!!</p>
+        <p class="for-tie">It's a Tie!!!</p>
+      </div>
+
+      <div class="current-score">
+        <p>Current Score</p>
+        <div>
+          <span>Player</span>
+          <input type="number" class="player-score" disabled>
+          <span>Computer</span>
+          <input type="number" class="computer-score" disabled>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden until first round finishes -->
+    <div class="nxt-match"><button>Next Match</button></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

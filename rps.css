@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1b1b1b, #2f2f2f);
+  color: #f1f1f1;
+}
+
+/* --- SCORE SECTIONS --- */
+.previous-score {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.previous-score p {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.prev-score-player-word,
+.prev-score-comp-word {
+  color: #f4e48b;
+  font-size: 0.95rem;
+  margin: 0 8px;
+}
+
+input.player-score,
+input.computer-score,
+input.prev-score-player,
+input.prev-score-computer {
+  background-color: #202020;
+  color: #ffea00;
+  border: 2px solid #ffcc00;
+  border-radius: 6px;
+  text-align: center;
+  padding: 4px 6px;
+  width: 55px;
+  font-weight: bold;
+}
+
+/* --- MAIN GAME BOX --- */
+.game-container {
+  width: 55%;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px #ffcc00 inset;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.game-title {
+  width: 100%;
+  background-color: #c4b784;
+  text-align: center;
+  box-shadow: 0 0 10px #ffcc00;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.game-title h1 {
+  color: #1b1b1b;
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+/* --- BUTTONS --- */
+.new-game, .nxt-match {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.new-game button, .nxt-match button {
+  cursor: pointer;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  background-color: rgba(255, 215, 0, 0.8);
+  color: #000;
+  transition: transform 0.2s;
+}
+
+.new-game button:hover, .nxt-match button:hover {
+  transform: scale(1.05);
+}
+
+/* --- GAME DISPLAY --- */
+.actual-game {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  display: none; /*hides game area until Start Game is clicked */
+}
+
+.nxt-match {
+  display: none; /*hides Next Match until needed */
+}
+
+.gm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* --- CHOICE SECTIONS --- */
+.player-choice, .computer-choice, .player-chose, .computer-chose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-choice p, .computer-choice p, .player-chose p, .computer-chose p {
+  margin-bottom: 5px;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.player-choice img {
+  height: 60px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.player-choice img:hover {
+  transform: scale(1.1);
+}
+
+.crock-img, .cpaper-img, .cscissors-img,
+.pshow-img-rock, .pshow-img-paper, .pshow-img-scissors,
+.cshow-img-rock, .cshow-img-paper, .cshow-img-scissors {
+  height: 60px;
+  margin: 5px;
+}
+
+/* Hidden by default */
+.pshow-img-rock,
+.pshow-img-paper,
+.pshow-img-scissors,
+.cshow-img-rock,
+.cshow-img-paper,
+.cshow-img-scissors,
+.computer-chose,
+.player-chose {
+  display: none;
+}
+
+/* --- RESULT SECTION --- */
+.result {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.result p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: none;
+}
+
+.for-player {
+  color: #4aff4a;
+}
+.for-computer {
+  color: #ff4a4a;
+}
+.for-tie {
+  color: #ffd700;
+}
+
+/* --- SCORE SECTION --- */
+.current-score {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.current-score p {
+  color: #ffcc00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.current-score span {
+  margin: 0 8px;
+  color: #f4e48b;
+}
